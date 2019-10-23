@@ -1,0 +1,20 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Hello
+
+{% endblock %}
+
+{% block body %}
+
+    <div class="example-wrapper">
+        <a href="{{ path('logout') }}">logout</a>
+        <h1>LOGIN!PAGE ✅</h1>
+        <form action="{{ path('login') }}" method="post">
+
+            <input type="text" id="login" class="form-control" name="login" placeholder="login"><br>
+            <input type="text" id="password" class="form-control" name="login" placeholder="password"><br>
+            <input type="submit" class="btn btn-primary">
+
+        </form>
+    </div>
+{% endblock %}

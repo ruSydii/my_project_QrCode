@@ -1,0 +1,45 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Hello KaryawanController!{% endblock %}
+
+{% block body %}
+    <h1>Data Karyawan</h1>
+    <table class="table table-stried">
+        <thead>
+            <tr>
+                <th>No</th>
+                <th>Nik</th>
+                <th>Nama</th>
+                <th>Unit</th>
+                <th>Divisi</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for kars in kar %}
+            <tr>
+                <td>
+                    {{ kars.id }}
+                </td>
+                <td>
+                    {{ kars.nik }}
+                </td>
+                <td>
+                    {{ kars.nama }}
+                </td>
+                <td>
+                    {{ kars.unit }}
+                </td>
+                <td>
+                    {{ kars.divisi }}
+                </td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+
+    <ul>
+        <li>
+            <a href="{{ path('export_data') }}">Export data Exel</a>
+        </li>
+    </ul>
+{% endblock %}
